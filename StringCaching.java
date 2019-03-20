@@ -14,28 +14,29 @@ public class TrabalhoDeArquitetura
     Random randomico = new Random();
     
     //Metodo que mostra o tempo do sistema em nanosegundos
-    long st1 = System.nanoTime();
+    long st1 = System.nanoTime();//Inicio da contagem de tempo
     
-    //Criacao da matriz N*M
+    //Criacao da matriz utilizando o método IJ
       for (int i = 0; i < Linhas; i++){
         for (int j = 0; j < Colunas; j++){
           matriz [i][j] = randomico.nextInt(matriz.length);
         }
       }
     
-    st1 = System.nanoTime() - st1; //Calculo do tempo que levou para criar a matriz
-    System.out.println("Tempo em nanosegundos da criacao da primeira matriz = " + st1+ " nanosegundos");
+    st1 = System.nanoTime() - st1; //Fim da contagem de tempo
+    System.out.println("Tempo em nanossegundos da criacao da primeira matriz = " + st1+ " nanosegundos");
     
     
-    st1 = System.nanoTime();
+    st1 = System.nanoTime();//Inicio da contagem de tempo
     
+    //Criacao da matriz utilizando o método IJ
     for (int i = 0; i < Linhas; i++){
         for (int j = 0; j < Colunas; j++){
           matriz [j][i] = randomico.nextInt(matriz.length);
         }
       }
     
-    st1 = System.nanoTime() - st1;
-    System.out.println("tempo em nanosegundos da criacao da segunda matriz = " + st1+ " nanosegundos");
+    st1 = System.nanoTime() - st1;//Fim da contagem de tempo
+    System.out.println("tempo em nanossegundos da criacao da segunda matriz = " + st1+ " nanosegundos");
   }
 }
